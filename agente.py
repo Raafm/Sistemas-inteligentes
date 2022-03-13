@@ -2,10 +2,10 @@ import pygame,time,math,random
 from colors import *
 
 
-def contar(screen, Contador):
-    pygame.draw.rect(screen, Light_grey, (1170,145 ,80, 60))   
+def contar(screen, Contador,color_square = Light_grey, color_number = Black):
+    pygame.draw.rect(screen, color_square, (1170,145 ,80, 60))   
     font = pygame.font.Font('freesansbold.ttf',20)
-    text = font.render(str(Contador) ,True, Black)                      
+    text = font.render(str(Contador) ,True, color_number)                      
     screen.blit(text,text.get_rect(center = (1210,180)))
     pygame.display.update()
 
